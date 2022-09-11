@@ -5,9 +5,9 @@ const outputBox = document.querySelector("#output-box");
 
 function compareValues(sum,luckyNumber){
     if(sum % luckyNumber===0){
-        outputBox.innerText="Your birthday is Lucky";
+        outputBox.innerText="Your birthday is Lucky!!🤩";
     }else{
-        outputBox.innerText= "unlucky";
+        outputBox.innerText= "We make our own Luck !!🙃";
     }
 }
 
@@ -28,3 +28,5 @@ function calculateSum(dob){
     }
     return sum;
 }
+
+checkNumberButton.addEventListener('click',checkBirthDateIsLucky)
