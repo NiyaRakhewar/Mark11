@@ -25,7 +25,7 @@ function sumCalculate(dob){
     dob = dob.replaceAll("-","");
     let sum=0;
     for(let i=0; i<dob.length; i++){
-        sum= sum + Num(dob.charAt(i));
+        sum= sum + Number(dob.charAt(i));
     }
     return sum;
 }
