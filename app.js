@@ -1,10 +1,10 @@
-const dateOfBirth = document.querySelector("#date-of-birth");
-const luckyNumber = document.querySelector("#lucky-number");
-const checkNumberButton = document.querySelector("#check-number");
-const outputBox = document.querySelector("#output-box");
+const birthDate = document.querySelector("#birth-date");
+const luckyNum = document.querySelector("#lucky-num");
+const checkNumBtn = document.querySelector("#check-num");
+const outputBox = document.querySelector("#output");
 
-function compareValues(sum,luckyNumber){
-    if(sum % luckyNumber===0){
+function compareValues(sum,luckyNum){
+    if(sum % luckyNum===0){
         outputBox.innerText="Your birthday is Lucky!!🤩";
     }else{
         outputBox.innerText= "We make our own Luck !!🙃";
@@ -13,21 +13,21 @@ function compareValues(sum,luckyNumber){
 }
 
 function checkBirthDateIsLucky(){
-    const dob= dateOfBirth.value;
-    const sum = calculateSum(dob);
-    if(sum&&dob)
-    compareValues(sum,luckyNumber.value)
+    const dob = birthDate.value;
+    const sum = sumCalculate(dob);
+    if( sum && dob )
+    compareValues(sum,luckyNum.value)
     else
     outputBox.innerText = "please enter both the field!!";
 }
 
-function calculateSum(dob){
-    dob= dob.replaceAll("-","");
+function sumCalculate(dob){
+    dob = dob.replaceAll("-","");
     let sum=0;
     for(let i=0; i<dob.length; i++){
-        sum= sum + Number(dob.charAt(i));
+        sum= sum + Num(dob.charAt(i));
     }
     return sum;
 }
 
-checkNumberButton.addEventListener('click',checkBirthDateIsLucky)
+checkNumBtn.addEventListener('click',checkBirthDateIsLucky)
