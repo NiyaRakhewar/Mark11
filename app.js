@@ -9,6 +9,7 @@ function compareValues(sum,luckyNumber){
     }else{
         outputBox.innerText= "We make our own Luck !!🙃";
     }
+
 }
 
 function checkBirthDateIsLucky(){
